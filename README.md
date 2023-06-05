@@ -7,3 +7,4 @@ Weather App using ReactJS
 4. Type 'npm start' to run the weather app.
 
 Just an information, in fetching an weather API, I used my unique App Key from https://openweathermap.org/ .
+Code repository is in master branch.
