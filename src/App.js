@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Landing from './pages/Landing/index';
+import Home from './pages/Home/index';
+import Weather from './pages/Weather/index';
+import React, { useState } from 'react';
+
+// Use this to pass the location state from Home Page to Weather Page using useContext hook
+export const Context = React.createContext();
 
 function App() {
+
+  // Use this to pass the location state from Home Page to Weather Page using useContext hook
+  const [ location, setLocation ] = useState('');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Context.Provider value={[ location, setLocation ]} >
+        <Router>
+          <Routes>
+            <Route path='/' element={ <Landing /> } />
+            <Route  path='/home' element={ <Home /> } />
+            <Route path='/weather' element={ <Weather /> } />
+          </Routes>
+        </Router>
+      </Context.Provider>
     </div>
   );
 }

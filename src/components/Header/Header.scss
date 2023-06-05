@@ -1,0 +1,104 @@
+.header-container {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+
+    .logo-container {
+        display: flex;
+
+        .logo {
+            font-size: 50px;
+        }
+    
+        .logo-name {
+            font-size: 30px;
+            font-weight: bolder;
+            margin: 0px 0px 0px 10px;
+        }
+    }
+
+    .tab-container {
+        display: flex;
+        flex-direction: row;
+
+        .tab-link {
+            text-decoration: none;
+
+            .tab {
+                margin: 10px;
+                border-radius: 5px;
+                padding: 4px 15px;
+                font-size: 20px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                color: black;
+                backdrop-filter: blur(11px) saturate(54%);
+                -webkit-backdrop-filter: blur(11px) saturate(54%);
+                background-color: rgba(255, 255, 255, 0.81);
+                border-radius: 12px;
+                border: 1px solid rgba(209, 213, 219, 0.3);
+            }
+        }
+    }
+
+    .logout-button {
+        margin: 10px;
+        border-radius: 5px;
+        padding: 4px 15px;
+        cursor: pointer;
+        backdrop-filter: blur(11px) saturate(54%);
+        -webkit-backdrop-filter: blur(11px) saturate(54%);
+        background-color: rgba(255, 255, 255, 0.81);
+        border-radius: 12px;
+        border: 1px solid rgba(209, 213, 219, 0.3);
+
+        span {
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+    .header-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 10px;
+        
+        .logo-container {
+
+            .logo {
+                font-size: 40px;
+            }
+        
+            .logo-name {
+                font-size: 25px;
+                font-weight: bolder;
+                margin: 0px 0px 0px 10px;
+            }
+        }
+    
+        .tab-container {
+            display: flex;
+            flex-direction: row;
+    
+            .tab-link {
+                text-decoration: none;
+
+                .tab {
+                    font-size: 15px;
+                }
+            }
+        }
+    
+        .logout-button {
+            span {
+                font-size: 15px;
+            }
+        }
+    }
+}
